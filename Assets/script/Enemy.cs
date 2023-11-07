@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public float DieVelocity = 5;
+    //   is called before the first frame update
     void Start()
     {
-        
+        Levelmanager.Instance.EnemyCountAdd();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.relativeVelocity.sqrMagnitude>DieVelocity)
+        {
+            Destroy(gameObject);
+            Levelmanager.Instance.EnemyDie();
+        }
+       
     }
 }

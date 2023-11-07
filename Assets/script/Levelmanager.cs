@@ -8,6 +8,9 @@ public class Levelmanager : MonoBehaviour
 
     public GameObject CharacterPrefab;
 
+    public GameObject ClearDilog;
+
+    public int EnemyCount { get; private set; } = 0;
 
     private void Awake()
     {
@@ -19,4 +22,20 @@ public class Levelmanager : MonoBehaviour
     {
         Instantiate(CharacterPrefab, transform.position, Quaternion.identity);
     }
+    public void EnemyCountAdd()
+    {
+        EnemyCount++;
+    }
+
+    public void EnemyDie()
+    {
+        EnemyCount--;
+        {
+            if(EnemyCount ==0)
+            {
+                ClearDilog.SetActive(true);
+            }
+        }
+    }
+
 }
