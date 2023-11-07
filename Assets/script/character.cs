@@ -33,14 +33,18 @@ public class character : MonoBehaviour
             _Dotobjects[i].SetActive(false);
         }
     }
-
-
+   
     private void OnMouseDrag()
     {
+       
+        
         if (_IsFly) return;
         Vector2 Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Vector2.Distance(_StartPositon, Position) > MaxPullDistance)
+        {
             Position = (Position - _StartPositon).normalized * MaxPullDistance + _StartPositon;
+        }
+           
 
         if (Position.x > _StartPositon.x)
             Position.x = _StartPositon.x;
@@ -53,7 +57,7 @@ public class character : MonoBehaviour
     private void OnMouseUp()
     {
         if (_IsFly) return;
-
+       
         var Force = (_StartPositon - (Vector2)transform.position) * FlyFrce;
 
         var Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -65,6 +69,7 @@ public class character : MonoBehaviour
         for (int i = 0; i < _Dotobjects.Length; i++)
         {
             _Dotobjects[i].SetActive(false);
+
         }
 
         _IsFly = true;
@@ -82,6 +87,7 @@ public class character : MonoBehaviour
     }
     private void UpdateObjects()
     {
+      
         var Force = (_StartPositon - (Vector2)transform.position) * FlyFrce;
         var CurrentTime = DotTimeInterval;
         for(int i = 0;i< _Dotobjects.Length; i++) 
