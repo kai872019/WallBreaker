@@ -19,4 +19,9 @@ public class Sceneswitching : MonoBehaviour
     {
         SceneManager.LoadScene("Game Scene_2");
     }
+    
+    public void vhang_button_3()
+    {
+        SceneManager.LoadScene("Game Scene_3");
+    }
 }

@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2005ceb243ebfd4394dc5852ffbf466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterPrefab: {fileID: 4904502095076318664, guid: c824b255bb4e7294b83a3be9cb49615e, type: 3}
+  CharacterPrefab: {fileID: 310431155994573428, guid: c918c72b81d492e4eb84ee390b6402fa, type: 3}
   ClearDilog: {fileID: 1458690139}
 --- !u!4 &102505780
 Transform:
@@ -5816,7 +5816,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 03a9ef52fe6c7d240963e008333698bc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.559
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
