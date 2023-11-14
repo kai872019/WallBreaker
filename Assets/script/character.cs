@@ -57,6 +57,7 @@ public class character : MonoBehaviour
     private void OnMouseUp()
     {
         GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().time = 0.5f;
         if (_IsFly) return;
        
         var Force = (_StartPositon - (Vector2)transform.position) * FlyFrce;
