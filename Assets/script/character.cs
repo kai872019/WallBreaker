@@ -56,14 +56,15 @@ public class character : MonoBehaviour
 
     private void OnMouseUp()
     {
+        GetComponent<AudioSource>().Play();
         if (_IsFly) return;
        
         var Force = (_StartPositon - (Vector2)transform.position) * FlyFrce;
-
+        
         var Rigidbody2D = GetComponent<Rigidbody2D>();
         Rigidbody2D.isKinematic = false;
         Rigidbody2D.AddForce(Force, ForceMode2D.Impulse);
-
+       
         Invoke(nameof(NextCharacter), 1);
 
         for (int i = 0; i < _Dotobjects.Length; i++)
