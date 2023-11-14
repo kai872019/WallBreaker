@@ -15,20 +15,18 @@ public class Sceneswitching : MonoBehaviour
         GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Game Scene");
     }
-   public  void vhang_button_2()
+   public  void chang_button_2()
     {
+        
         GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Game Scene_2");
     }
     
-    public void vhang_button_3()
+    public void chang_button_3()
     {
         GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("Game Scene_3");
     }
-
-    public void chang_button_4()
-    {
-        GetComponent<AudioSource>().Play();
-    }
+    
+   
 }

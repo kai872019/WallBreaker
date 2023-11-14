@@ -12,7 +12,6 @@ public class Retrybutton : MonoBehaviour
 
         GetComponent<Button>().onClick.AddListener(() =>
         {
-            GetComponent<AudioSource>().Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         });
     }
